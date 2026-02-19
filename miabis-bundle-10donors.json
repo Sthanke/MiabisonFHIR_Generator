@@ -1,0 +1,4722 @@
+{
+  "resourceType": "Bundle",
+  "id": "c2d6854b-0f4c-4145-a0df-8bb777fe951e",
+  "type": "transaction",
+  "entry": [
+    {
+      "fullUrl": "Organization/juristic-person-SI-001",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "juristic-person-SI-001",
+        "identifier": [
+          {
+            "system": "http://www.bbmri-eric.eu/",
+            "value": "bbmri-eric:ID:juristic-person-SI-001"
+          }
+        ],
+        "name": "Ljubljana University",
+        "address": [
+          {
+            "city": "Ljubljana",
+            "country": "SI"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Organization/juristic-person-SI-001</b>: Ljubljana University, Ljubljana, SI</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Organization/juristic-person-SI-001"
+      }
+    },
+    {
+      "fullUrl": "Organization/biobank-SI-001",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "biobank-SI-001",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-biobank"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://www.bbmri-eric.eu/",
+            "value": "bbmri-eric:ID:SI_BIOBANK-SI-001"
+          }
+        ],
+        "name": "Ljubljana Clinical Research Biobank",
+        "alias": [
+          "BIOBANK-SI-001"
+        ],
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://example.org/biobank-SI-001"
+          }
+        ],
+        "address": [
+          {
+            "city": "Ljubljana",
+            "country": "SI"
+          }
+        ],
+        "contact": [
+          {
+            "name": {
+              "family": "Jensen",
+              "given": [
+                "Milan"
+              ]
+            },
+            "telecom": [
+              {
+                "system": "email",
+                "value": "contact@biobank-SI-001.example.org"
+              }
+            ]
+          }
+        ],
+        "partOf": {
+          "reference": "Organization/juristic-person-SI-001"
+        },
+        "extension": [
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-infrastructural-capabilities-extension",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-infrastructural-capabilities-cs",
+                  "code": "SampleProcessing"
+                }
+              ]
+            }
+          },
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-quality-management-standard-extension",
+            "valueString": "ISO 20387"
+          },
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-organization-description-extension",
+            "valueString": "Ljubljana Clinical Research Biobank is a biobank facility providing high-quality biospecimens and data for research."
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Organization/biobank-SI-001</b>: Ljubljana Clinical Research Biobank, Ljubljana, SI. BBMRI-ERIC ID: SI_BIOBANK-SI-001.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Organization/biobank-SI-001"
+      }
+    },
+    {
+      "fullUrl": "Organization/juristic-person-DE-002",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "juristic-person-DE-002",
+        "identifier": [
+          {
+            "system": "http://www.bbmri-eric.eu/",
+            "value": "bbmri-eric:ID:juristic-person-DE-002"
+          }
+        ],
+        "name": "Hamburg University",
+        "address": [
+          {
+            "city": "Hamburg",
+            "country": "DE"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Organization/juristic-person-DE-002</b>: Hamburg University, Hamburg, DE</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Organization/juristic-person-DE-002"
+      }
+    },
+    {
+      "fullUrl": "Organization/biobank-DE-002",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "biobank-DE-002",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-biobank"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://www.bbmri-eric.eu/",
+            "value": "bbmri-eric:ID:DE_BIOBANK-DE-002"
+          }
+        ],
+        "name": "Hamburg University Hospital Biobank",
+        "alias": [
+          "BIOBANK-DE-002"
+        ],
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://example.org/biobank-DE-002"
+          }
+        ],
+        "address": [
+          {
+            "city": "Hamburg",
+            "country": "DE"
+          }
+        ],
+        "contact": [
+          {
+            "name": {
+              "family": "Popov",
+              "given": [
+                "Lars"
+              ]
+            },
+            "telecom": [
+              {
+                "system": "email",
+                "value": "contact@biobank-DE-002.example.org"
+              }
+            ]
+          }
+        ],
+        "partOf": {
+          "reference": "Organization/juristic-person-DE-002"
+        },
+        "extension": [
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-infrastructural-capabilities-extension",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-infrastructural-capabilities-cs",
+                  "code": "SampleStorage"
+                }
+              ]
+            }
+          },
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-quality-management-standard-extension",
+            "valueString": "ISO 20387"
+          },
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-organization-description-extension",
+            "valueString": "Hamburg University Hospital Biobank is a biobank facility providing high-quality biospecimens and data for research."
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Organization/biobank-DE-002</b>: Hamburg University Hospital Biobank, Hamburg, DE. BBMRI-ERIC ID: DE_BIOBANK-DE-002.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Organization/biobank-DE-002"
+      }
+    },
+    {
+      "fullUrl": "Organization/network-org-001",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "network-org-001",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-network-organization"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://www.bbmri-eric.eu/",
+            "value": "bbmri-eric:ID:network-org-001"
+          }
+        ],
+        "name": "BBMRI-ERIC Network Organization",
+        "partOf": {
+          "reference": "Organization/juristic-person-SI-001"
+        },
+        "extension": [
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-organization-description-extension",
+            "valueString": "BBMRI-ERIC Network Organization coordinates biobank collaboration across multiple institutions."
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Organization/network-org-001</b>: BBMRI-ERIC Network Organization</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Organization/network-org-001"
+      }
+    },
+    {
+      "fullUrl": "Group/network-001",
+      "resource": {
+        "resourceType": "Group",
+        "id": "network-001",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-network"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://www.bbmri-eric.eu/",
+            "value": "bbmri-eric:ID:network-001"
+          }
+        ],
+        "active": true,
+        "type": "person",
+        "actual": false,
+        "name": "BBMRI-ERIC Network",
+        "managingEntity": {
+          "reference": "Organization/network-org-001"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Group.member.entity",
+            "valueReference": {
+              "reference": "Organization/biobank-SI-001"
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Group.member.entity",
+            "valueReference": {
+              "reference": "Organization/biobank-DE-002"
+            }
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Group/network-001</b>: Network with 2 biobanks.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Group/network-001"
+      }
+    },
+    {
+      "fullUrl": "Organization/col-org-001",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "col-org-001",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-collection-organization"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://www.bbmri-eric.eu/",
+            "value": "bbmri-eric:ID:col-org-001"
+          }
+        ],
+        "name": "Solid Tumors",
+        "alias": [
+          "COL-ORG-00"
+        ],
+        "active": true,
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://example.org/col-org-001"
+          }
+        ],
+        "address": [
+          {
+            "country": "SI"
+          }
+        ],
+        "contact": [
+          {
+            "name": {
+              "family": "Popov",
+              "given": [
+                "Sofia"
+              ]
+            },
+            "telecom": [
+              {
+                "system": "email",
+                "value": "pi@col-org-001.example.org"
+              }
+            ]
+          }
+        ],
+        "partOf": {
+          "reference": "Organization/biobank-SI-001"
+        },
+        "extension": [
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-organization-description-extension",
+            "valueString": "Collection of biospecimens: Solid Tumors."
+          },
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-collection-design-extension",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-collection-design-cs",
+                  "code": "PopulationBasedCohort"
+                }
+              ]
+            }
+          },
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample-source-extension",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-sample-source-cs",
+                  "code": "Human"
+                }
+              ]
+            }
+          },
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-collection-dataset-type-extension",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-collection-dataset-typeCS",
+                  "code": "BiologicalSamples"
+                }
+              ]
+            }
+          },
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-use-and-access-conditions-extension",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-use-and-access-conditions-cs",
+                  "code": "Collaboration"
+                }
+              ]
+            }
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Organization/col-org-001</b>: Solid Tumors, part of Organization/biobank-SI-001.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Organization/col-org-001"
+      }
+    },
+    {
+      "fullUrl": "Organization/col-org-002",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "col-org-002",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-collection-organization"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://www.bbmri-eric.eu/",
+            "value": "bbmri-eric:ID:col-org-002"
+          }
+        ],
+        "name": "Hematological Malignancies",
+        "alias": [
+          "COL-ORG-00"
+        ],
+        "active": true,
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://example.org/col-org-002"
+          }
+        ],
+        "address": [
+          {
+            "country": "DE"
+          }
+        ],
+        "contact": [
+          {
+            "name": {
+              "family": "Garcia",
+              "given": [
+                "Elena"
+              ]
+            },
+            "telecom": [
+              {
+                "system": "email",
+                "value": "pi@col-org-002.example.org"
+              }
+            ]
+          }
+        ],
+        "partOf": {
+          "reference": "Organization/biobank-DE-002"
+        },
+        "extension": [
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-organization-description-extension",
+            "valueString": "Collection of biospecimens: Hematological Malignancies."
+          },
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-collection-design-extension",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-collection-design-cs",
+                  "code": "CrossSectional"
+                }
+              ]
+            }
+          },
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample-source-extension",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-sample-source-cs",
+                  "code": "Human"
+                }
+              ]
+            }
+          },
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-collection-dataset-type-extension",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-collection-dataset-typeCS",
+                  "code": "BiologicalSamples"
+                }
+              ]
+            }
+          },
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-use-and-access-conditions-extension",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-use-and-access-conditions-cs",
+                  "code": "Collaboration"
+                }
+              ]
+            }
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Organization/col-org-002</b>: Hematological Malignancies, part of Organization/biobank-DE-002.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Organization/col-org-002"
+      }
+    },
+    {
+      "fullUrl": "Organization/col-org-003",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "col-org-003",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-collection-organization"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://www.bbmri-eric.eu/",
+            "value": "bbmri-eric:ID:col-org-003"
+          }
+        ],
+        "name": "Breast Cancer Cohort",
+        "alias": [
+          "COL-ORG-00"
+        ],
+        "active": true,
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://example.org/col-org-003"
+          }
+        ],
+        "address": [
+          {
+            "country": "SI"
+          }
+        ],
+        "contact": [
+          {
+            "name": {
+              "family": "Larsson",
+              "given": [
+                "Petra"
+              ]
+            },
+            "telecom": [
+              {
+                "system": "email",
+                "value": "pi@col-org-003.example.org"
+              }
+            ]
+          }
+        ],
+        "partOf": {
+          "reference": "Organization/biobank-SI-001"
+        },
+        "extension": [
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-organization-description-extension",
+            "valueString": "Collection of biospecimens: Breast Cancer Cohort."
+          },
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-collection-design-extension",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-collection-design-cs",
+                  "code": "CaseControl"
+                }
+              ]
+            }
+          },
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample-source-extension",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-sample-source-cs",
+                  "code": "Human"
+                }
+              ]
+            }
+          },
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-collection-dataset-type-extension",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-collection-dataset-typeCS",
+                  "code": "BiologicalSamples"
+                }
+              ]
+            }
+          },
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-use-and-access-conditions-extension",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-use-and-access-conditions-cs",
+                  "code": "Collaboration"
+                }
+              ]
+            }
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Organization/col-org-003</b>: Breast Cancer Cohort, part of Organization/biobank-SI-001.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Organization/col-org-003"
+      }
+    },
+    {
+      "fullUrl": "Group/collection-001",
+      "resource": {
+        "resourceType": "Group",
+        "id": "collection-001",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-collection"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://www.bbmri-eric.eu/",
+            "value": "bbmri-eric:ID:collection-001"
+          }
+        ],
+        "active": true,
+        "type": "person",
+        "actual": true,
+        "name": "Collection 001",
+        "managingEntity": {
+          "reference": "Organization/col-org-001"
+        },
+        "characteristic": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-characteristicCS",
+                  "code": "Age"
+                }
+              ]
+            },
+            "valueRange": {
+              "low": {
+                "value": 18,
+                "unit": "years"
+              },
+              "high": {
+                "value": 78,
+                "unit": "years"
+              }
+            },
+            "exclude": false
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-characteristicCS",
+                  "code": "Sex"
+                }
+              ]
+            },
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/administrative-gender",
+                  "code": "male"
+                }
+              ]
+            },
+            "exclude": false
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-characteristicCS",
+                  "code": "Sex"
+                }
+              ]
+            },
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/administrative-gender",
+                  "code": "female"
+                }
+              ]
+            },
+            "exclude": false
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-characteristicCS",
+                  "code": "StorageTemperature"
+                }
+              ]
+            },
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-storage-temperature-cs",
+                  "code": "RT"
+                }
+              ]
+            },
+            "exclude": false
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-characteristicCS",
+                  "code": "StorageTemperature"
+                }
+              ]
+            },
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-storage-temperature-cs",
+                  "code": "LN"
+                }
+              ]
+            },
+            "exclude": false
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-characteristicCS",
+                  "code": "MaterialType"
+                }
+              ]
+            },
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-collection-sample-type-cs",
+                  "code": "RNA"
+                }
+              ]
+            },
+            "exclude": false
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-characteristicCS",
+                  "code": "MaterialType"
+                }
+              ]
+            },
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-collection-sample-type-cs",
+                  "code": "DNA"
+                }
+              ]
+            },
+            "exclude": false
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-characteristicCS",
+                  "code": "DiagnosisAvailable"
+                }
+              ]
+            },
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "C00-C97",
+                  "display": "Malignant neoplasms"
+                }
+              ]
+            },
+            "exclude": false
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-number-of-subjects-extension",
+            "valueInteger": 4
+          },
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-inclusion-criteria-extension",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-inclusion-criteria-cs",
+                  "code": "HospitalPatient"
+                }
+              ]
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Group.member.entity",
+            "valueReference": {
+              "reference": "Specimen/sample-000001-01"
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Group.member.entity",
+            "valueReference": {
+              "reference": "Specimen/sample-000001-02"
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Group.member.entity",
+            "valueReference": {
+              "reference": "Specimen/sample-000004-01"
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Group.member.entity",
+            "valueReference": {
+              "reference": "Specimen/sample-000004-02"
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Group.member.entity",
+            "valueReference": {
+              "reference": "Specimen/sample-000007-01"
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Group.member.entity",
+            "valueReference": {
+              "reference": "Specimen/sample-000010-01"
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Group.member.entity",
+            "valueReference": {
+              "reference": "Specimen/sample-000010-02"
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Group.member.entity",
+            "valueReference": {
+              "reference": "Specimen/sample-000010-03"
+            }
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Group/collection-001</b>: Collection with 4 subjects.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Group/collection-001"
+      }
+    },
+    {
+      "fullUrl": "Group/collection-002",
+      "resource": {
+        "resourceType": "Group",
+        "id": "collection-002",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-collection"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://www.bbmri-eric.eu/",
+            "value": "bbmri-eric:ID:collection-002"
+          }
+        ],
+        "active": true,
+        "type": "person",
+        "actual": true,
+        "name": "Collection 002",
+        "managingEntity": {
+          "reference": "Organization/col-org-002"
+        },
+        "characteristic": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-characteristicCS",
+                  "code": "Age"
+                }
+              ]
+            },
+            "valueRange": {
+              "low": {
+                "value": 18,
+                "unit": "years"
+              },
+              "high": {
+                "value": 79,
+                "unit": "years"
+              }
+            },
+            "exclude": false
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-characteristicCS",
+                  "code": "Sex"
+                }
+              ]
+            },
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/administrative-gender",
+                  "code": "male"
+                }
+              ]
+            },
+            "exclude": false
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-characteristicCS",
+                  "code": "Sex"
+                }
+              ]
+            },
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/administrative-gender",
+                  "code": "female"
+                }
+              ]
+            },
+            "exclude": false
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-characteristicCS",
+                  "code": "StorageTemperature"
+                }
+              ]
+            },
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-storage-temperature-cs",
+                  "code": "2to10"
+                }
+              ]
+            },
+            "exclude": false
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-characteristicCS",
+                  "code": "StorageTemperature"
+                }
+              ]
+            },
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-storage-temperature-cs",
+                  "code": "LN"
+                }
+              ]
+            },
+            "exclude": false
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-characteristicCS",
+                  "code": "MaterialType"
+                }
+              ]
+            },
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-collection-sample-type-cs",
+                  "code": "Urine"
+                }
+              ]
+            },
+            "exclude": false
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-characteristicCS",
+                  "code": "MaterialType"
+                }
+              ]
+            },
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-collection-sample-type-cs",
+                  "code": "BuffyCoat"
+                }
+              ]
+            },
+            "exclude": false
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-characteristicCS",
+                  "code": "DiagnosisAvailable"
+                }
+              ]
+            },
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "C00-C97",
+                  "display": "Malignant neoplasms"
+                }
+              ]
+            },
+            "exclude": false
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-number-of-subjects-extension",
+            "valueInteger": 3
+          },
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-inclusion-criteria-extension",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-inclusion-criteria-cs",
+                  "code": "FamiliesOfAffectedPersons"
+                }
+              ]
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Group.member.entity",
+            "valueReference": {
+              "reference": "Specimen/sample-000002-01"
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Group.member.entity",
+            "valueReference": {
+              "reference": "Specimen/sample-000002-02"
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Group.member.entity",
+            "valueReference": {
+              "reference": "Specimen/sample-000005-01"
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Group.member.entity",
+            "valueReference": {
+              "reference": "Specimen/sample-000008-01"
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Group.member.entity",
+            "valueReference": {
+              "reference": "Specimen/sample-000008-02"
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Group.member.entity",
+            "valueReference": {
+              "reference": "Specimen/sample-000008-03"
+            }
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Group/collection-002</b>: Collection with 3 subjects.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Group/collection-002"
+      }
+    },
+    {
+      "fullUrl": "Group/collection-003",
+      "resource": {
+        "resourceType": "Group",
+        "id": "collection-003",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-collection"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://www.bbmri-eric.eu/",
+            "value": "bbmri-eric:ID:collection-003"
+          }
+        ],
+        "active": true,
+        "type": "person",
+        "actual": true,
+        "name": "Collection 003",
+        "managingEntity": {
+          "reference": "Organization/col-org-003"
+        },
+        "characteristic": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-characteristicCS",
+                  "code": "Age"
+                }
+              ]
+            },
+            "valueRange": {
+              "low": {
+                "value": 18,
+                "unit": "years"
+              },
+              "high": {
+                "value": 77,
+                "unit": "years"
+              }
+            },
+            "exclude": false
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-characteristicCS",
+                  "code": "Sex"
+                }
+              ]
+            },
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/administrative-gender",
+                  "code": "male"
+                }
+              ]
+            },
+            "exclude": false
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-characteristicCS",
+                  "code": "Sex"
+                }
+              ]
+            },
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/administrative-gender",
+                  "code": "female"
+                }
+              ]
+            },
+            "exclude": false
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-characteristicCS",
+                  "code": "StorageTemperature"
+                }
+              ]
+            },
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-storage-temperature-cs",
+                  "code": "2to10"
+                }
+              ]
+            },
+            "exclude": false
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-characteristicCS",
+                  "code": "StorageTemperature"
+                }
+              ]
+            },
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-storage-temperature-cs",
+                  "code": "minus18to35"
+                }
+              ]
+            },
+            "exclude": false
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-characteristicCS",
+                  "code": "MaterialType"
+                }
+              ]
+            },
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-collection-sample-type-cs",
+                  "code": "BuffyCoat"
+                }
+              ]
+            },
+            "exclude": false
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-characteristicCS",
+                  "code": "MaterialType"
+                }
+              ]
+            },
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-collection-sample-type-cs",
+                  "code": "Plasma"
+                }
+              ]
+            },
+            "exclude": false
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-characteristicCS",
+                  "code": "DiagnosisAvailable"
+                }
+              ]
+            },
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "C00-C97",
+                  "display": "Malignant neoplasms"
+                }
+              ]
+            },
+            "exclude": false
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-number-of-subjects-extension",
+            "valueInteger": 3
+          },
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-inclusion-criteria-extension",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-inclusion-criteria-cs",
+                  "code": "FamiliesOfAffectedPersons"
+                }
+              ]
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Group.member.entity",
+            "valueReference": {
+              "reference": "Specimen/sample-000003-01"
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Group.member.entity",
+            "valueReference": {
+              "reference": "Specimen/sample-000006-01"
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Group.member.entity",
+            "valueReference": {
+              "reference": "Specimen/sample-000009-01"
+            }
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Group/collection-003</b>: Collection with 3 subjects.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Group/collection-003"
+      }
+    },
+    {
+      "fullUrl": "Patient/donor-000001",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "donor-000001",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample-donor"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://example.org/biobank/donor-ids",
+            "value": "DONOR-000001"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1954-04-25",
+        "extension": [
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-dataset-type-extension",
+            "valueCode": "ImagingData"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Patient/donor-000001</b>: Female, born 1954-04-25. Datasets: ImagingData.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Patient/donor-000001"
+      }
+    },
+    {
+      "fullUrl": "Patient/donor-000002",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "donor-000002",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample-donor"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://example.org/biobank/donor-ids",
+            "value": "DONOR-000002"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1959-12-03",
+        "extension": [
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-dataset-type-extension",
+            "valueCode": "PhysiologicalBiochemicalMeasurements"
+          }
+        ],
+        "deceasedDateTime": "2021-05-03",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Patient/donor-000002</b>: Female, born 1959-12-03. Datasets: PhysiologicalBiochemicalMeasurements.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Patient/donor-000002"
+      }
+    },
+    {
+      "fullUrl": "Patient/donor-000003",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "donor-000003",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample-donor"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://example.org/biobank/donor-ids",
+            "value": "DONOR-000003"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1956-09-24",
+        "extension": [
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-dataset-type-extension",
+            "valueCode": "ImagingData"
+          },
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-dataset-type-extension",
+            "valueCode": "SurveyData"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Patient/donor-000003</b>: Male, born 1956-09-24. Datasets: ImagingData, SurveyData.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Patient/donor-000003"
+      }
+    },
+    {
+      "fullUrl": "Patient/donor-000004",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "donor-000004",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample-donor"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://example.org/biobank/donor-ids",
+            "value": "DONOR-000004"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1962-10-23",
+        "extension": [
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-dataset-type-extension",
+            "valueCode": "ImagingData"
+          },
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-dataset-type-extension",
+            "valueCode": "PhysiologicalBiochemicalMeasurements"
+          },
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-dataset-type-extension",
+            "valueCode": "GenomicData"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Patient/donor-000004</b>: Male, born 1962-10-23. Datasets: ImagingData, PhysiologicalBiochemicalMeasurements, GenomicData.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Patient/donor-000004"
+      }
+    },
+    {
+      "fullUrl": "Patient/donor-000005",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "donor-000005",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample-donor"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://example.org/biobank/donor-ids",
+            "value": "DONOR-000005"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1946-01-28",
+        "extension": [
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-dataset-type-extension",
+            "valueCode": "BiologicalSamples"
+          },
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-dataset-type-extension",
+            "valueCode": "GenomicData"
+          },
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-dataset-type-extension",
+            "valueCode": "ImagingData"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Patient/donor-000005</b>: Female, born 1946-01-28. Datasets: BiologicalSamples, GenomicData, ImagingData.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Patient/donor-000005"
+      }
+    },
+    {
+      "fullUrl": "Patient/donor-000006",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "donor-000006",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample-donor"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://example.org/biobank/donor-ids",
+            "value": "DONOR-000006"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1949-11-18",
+        "extension": [
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-dataset-type-extension",
+            "valueCode": "SurveyData"
+          },
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-dataset-type-extension",
+            "valueCode": "Lifestyle"
+          },
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-dataset-type-extension",
+            "valueCode": "PhysiologicalBiochemicalMeasurements"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Patient/donor-000006</b>: Male, born 1949-11-18. Datasets: SurveyData, Lifestyle, PhysiologicalBiochemicalMeasurements.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Patient/donor-000006"
+      }
+    },
+    {
+      "fullUrl": "Patient/donor-000007",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "donor-000007",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample-donor"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://example.org/biobank/donor-ids",
+            "value": "DONOR-000007"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1999-10-07",
+        "extension": [
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-dataset-type-extension",
+            "valueCode": "MedicalRecords"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Patient/donor-000007</b>: Female, born 1999-10-07. Datasets: MedicalRecords.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Patient/donor-000007"
+      }
+    },
+    {
+      "fullUrl": "Patient/donor-000008",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "donor-000008",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample-donor"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://example.org/biobank/donor-ids",
+            "value": "DONOR-000008"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1965-10-03",
+        "extension": [
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-dataset-type-extension",
+            "valueCode": "PhysiologicalBiochemicalMeasurements"
+          },
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-dataset-type-extension",
+            "valueCode": "BiologicalSamples"
+          },
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-dataset-type-extension",
+            "valueCode": "GenomicData"
+          }
+        ],
+        "deceasedDateTime": "2023-02-25",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Patient/donor-000008</b>: Male, born 1965-10-03. Datasets: PhysiologicalBiochemicalMeasurements, BiologicalSamples, GenomicData.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Patient/donor-000008"
+      }
+    },
+    {
+      "fullUrl": "Patient/donor-000009",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "donor-000009",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample-donor"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://example.org/biobank/donor-ids",
+            "value": "DONOR-000009"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1950-04-08",
+        "extension": [
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-dataset-type-extension",
+            "valueCode": "MedicalRecords"
+          }
+        ],
+        "deceasedDateTime": "2020-10-18",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Patient/donor-000009</b>: Female, born 1950-04-08. Datasets: MedicalRecords.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Patient/donor-000009"
+      }
+    },
+    {
+      "fullUrl": "Patient/donor-000010",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "donor-000010",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample-donor"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://example.org/biobank/donor-ids",
+            "value": "DONOR-000010"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1970-11-16",
+        "extension": [
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-dataset-type-extension",
+            "valueCode": "GenomicData"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Patient/donor-000010</b>: Male, born 1970-11-16. Datasets: GenomicData.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Patient/donor-000010"
+      }
+    },
+    {
+      "fullUrl": "Condition/condition-000001",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condition-000001",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-condition"
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "C50.9",
+              "display": "Breast, unspecified"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/donor-000001"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition/condition-000001</b>: ICD-10 C50.9 - Breast, unspecified. Subject: Patient/donor-000001.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Condition/condition-000001"
+      }
+    },
+    {
+      "fullUrl": "Condition/condition-000002",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condition-000002",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-condition"
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "C50.9",
+              "display": "Breast, unspecified"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/donor-000002"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition/condition-000002</b>: ICD-10 C50.9 - Breast, unspecified. Subject: Patient/donor-000002.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Condition/condition-000002"
+      }
+    },
+    {
+      "fullUrl": "Condition/condition-000003",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condition-000003",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-condition"
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "C22.0",
+              "display": "Liver cell carcinoma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/donor-000003"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition/condition-000003</b>: ICD-10 C22.0 - Liver cell carcinoma. Subject: Patient/donor-000003.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Condition/condition-000003"
+      }
+    },
+    {
+      "fullUrl": "Condition/condition-000004",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condition-000004",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-condition"
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "C50.4",
+              "display": "Upper-outer quadrant of breast"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/donor-000004"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition/condition-000004</b>: ICD-10 C50.4 - Upper-outer quadrant of breast. Subject: Patient/donor-000004.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Condition/condition-000004"
+      }
+    },
+    {
+      "fullUrl": "Condition/condition-000005",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condition-000005",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-condition"
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "C20",
+              "display": "Malignant neoplasm of rectum"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/donor-000005"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition/condition-000005</b>: ICD-10 C20 - Malignant neoplasm of rectum. Subject: Patient/donor-000005.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Condition/condition-000005"
+      }
+    },
+    {
+      "fullUrl": "Condition/condition-000006",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condition-000006",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-condition"
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "C67.9",
+              "display": "Bladder, unspecified"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/donor-000006"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition/condition-000006</b>: ICD-10 C67.9 - Bladder, unspecified. Subject: Patient/donor-000006.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Condition/condition-000006"
+      }
+    },
+    {
+      "fullUrl": "Condition/condition-000007",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condition-000007",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-condition"
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "C43.5",
+              "display": "Malignant melanoma of trunk"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/donor-000007"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition/condition-000007</b>: ICD-10 C43.5 - Malignant melanoma of trunk. Subject: Patient/donor-000007.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Condition/condition-000007"
+      }
+    },
+    {
+      "fullUrl": "Condition/condition-000008",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condition-000008",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-condition"
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "C73",
+              "display": "Malignant neoplasm of thyroid gland"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/donor-000008"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition/condition-000008</b>: ICD-10 C73 - Malignant neoplasm of thyroid gland. Subject: Patient/donor-000008.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Condition/condition-000008"
+      }
+    },
+    {
+      "fullUrl": "Condition/condition-000009",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condition-000009",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-condition"
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "C18.7",
+              "display": "Sigmoid colon"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/donor-000009"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition/condition-000009</b>: ICD-10 C18.7 - Sigmoid colon. Subject: Patient/donor-000009.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Condition/condition-000009"
+      }
+    },
+    {
+      "fullUrl": "Condition/condition-000010",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condition-000010",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-condition"
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "C15.9",
+              "display": "Oesophagus, unspecified"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/donor-000010"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition/condition-000010</b>: ICD-10 C15.9 - Oesophagus, unspecified. Subject: Patient/donor-000010.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Condition/condition-000010"
+      }
+    },
+    {
+      "fullUrl": "Specimen/sample-000001-01",
+      "resource": {
+        "resourceType": "Specimen",
+        "id": "sample-000001-01",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://example.org/biobank/sample-ids",
+            "value": "SAMPLE-000001-01"
+          }
+        ],
+        "type": {
+          "coding": [
+            {
+              "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-detailed-samply-type-cs",
+              "code": "DNA",
+              "display": "DNA"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/donor-000001"
+        },
+        "collection": {
+          "collectedDateTime": "2022-01-24T13:00:00+01:00",
+          "bodySite": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "76752008",
+                "display": "Breast structure"
+              }
+            ]
+          }
+        },
+        "processing": [
+          {
+            "description": "Processed and stored at -18 to -35 degrees Celsius",
+            "extension": [
+              {
+                "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample-storage-temperature-extension",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-storage-temperature-cs",
+                      "code": "minus18to35",
+                      "display": "-18 to -35 degrees Celsius"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample-collection-extension",
+            "valueIdentifier": {
+              "system": "https://directory.bbmri-eric.eu/",
+              "value": "bbmri-eric:ID:biobank-SI-001:collection:collection-001"
+            }
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Specimen/sample-000001-01</b>: DNA, Breast structure, from Patient/donor-000001. Storage: -18 to -35 degrees Celsius.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Specimen/sample-000001-01"
+      }
+    },
+    {
+      "fullUrl": "Specimen/sample-000001-02",
+      "resource": {
+        "resourceType": "Specimen",
+        "id": "sample-000001-02",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://example.org/biobank/sample-ids",
+            "value": "SAMPLE-000001-02"
+          }
+        ],
+        "type": {
+          "coding": [
+            {
+              "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-detailed-samply-type-cs",
+              "code": "Urine",
+              "display": "Urine"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/donor-000001"
+        },
+        "collection": {
+          "collectedDateTime": "2019-07-03T14:00:00+01:00",
+          "bodySite": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "76752008",
+                "display": "Breast structure"
+              }
+            ]
+          }
+        },
+        "processing": [
+          {
+            "description": "Processed and stored at -18 to -35 degrees Celsius",
+            "extension": [
+              {
+                "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample-storage-temperature-extension",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-storage-temperature-cs",
+                      "code": "minus18to35",
+                      "display": "-18 to -35 degrees Celsius"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample-collection-extension",
+            "valueIdentifier": {
+              "system": "https://directory.bbmri-eric.eu/",
+              "value": "bbmri-eric:ID:biobank-SI-001:collection:collection-001"
+            }
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Specimen/sample-000001-02</b>: Urine, Breast structure, from Patient/donor-000001. Storage: -18 to -35 degrees Celsius.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Specimen/sample-000001-02"
+      }
+    },
+    {
+      "fullUrl": "Specimen/sample-000002-01",
+      "resource": {
+        "resourceType": "Specimen",
+        "id": "sample-000002-01",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://example.org/biobank/sample-ids",
+            "value": "SAMPLE-000002-01"
+          }
+        ],
+        "type": {
+          "coding": [
+            {
+              "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-detailed-samply-type-cs",
+              "code": "Serum",
+              "display": "Serum"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/donor-000002"
+        },
+        "collection": {
+          "collectedDateTime": "2025-11-27T11:00:00+01:00",
+          "bodySite": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "76752008",
+                "display": "Breast structure"
+              }
+            ]
+          }
+        },
+        "processing": [
+          {
+            "description": "Processed and stored at -60 to -85 degrees Celsius",
+            "extension": [
+              {
+                "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample-storage-temperature-extension",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-storage-temperature-cs",
+                      "code": "minus60to85",
+                      "display": "-60 to -85 degrees Celsius"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample-collection-extension",
+            "valueIdentifier": {
+              "system": "https://directory.bbmri-eric.eu/",
+              "value": "bbmri-eric:ID:biobank-DE-002:collection:collection-002"
+            }
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Specimen/sample-000002-01</b>: Serum, Breast structure, from Patient/donor-000002. Storage: -60 to -85 degrees Celsius.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Specimen/sample-000002-01"
+      }
+    },
+    {
+      "fullUrl": "Specimen/sample-000002-02",
+      "resource": {
+        "resourceType": "Specimen",
+        "id": "sample-000002-02",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://example.org/biobank/sample-ids",
+            "value": "SAMPLE-000002-02"
+          }
+        ],
+        "type": {
+          "coding": [
+            {
+              "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-detailed-samply-type-cs",
+              "code": "Blood",
+              "display": "Whole blood"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/donor-000002"
+        },
+        "collection": {
+          "collectedDateTime": "2023-06-07T16:00:00+01:00",
+          "bodySite": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "76752008",
+                "display": "Breast structure"
+              }
+            ]
+          }
+        },
+        "processing": [
+          {
+            "description": "Processed and stored at -18 to -35 degrees Celsius",
+            "extension": [
+              {
+                "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample-storage-temperature-extension",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-storage-temperature-cs",
+                      "code": "minus18to35",
+                      "display": "-18 to -35 degrees Celsius"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample-collection-extension",
+            "valueIdentifier": {
+              "system": "https://directory.bbmri-eric.eu/",
+              "value": "bbmri-eric:ID:biobank-DE-002:collection:collection-002"
+            }
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Specimen/sample-000002-02</b>: Whole blood, Breast structure, from Patient/donor-000002. Storage: -18 to -35 degrees Celsius.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Specimen/sample-000002-02"
+      }
+    },
+    {
+      "fullUrl": "Specimen/sample-000003-01",
+      "resource": {
+        "resourceType": "Specimen",
+        "id": "sample-000003-01",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://example.org/biobank/sample-ids",
+            "value": "SAMPLE-000003-01"
+          }
+        ],
+        "type": {
+          "coding": [
+            {
+              "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-detailed-samply-type-cs",
+              "code": "CellLineTumor",
+              "display": "Tumor cell line"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/donor-000003"
+        },
+        "collection": {
+          "collectedDateTime": "2023-01-08T06:00:00+01:00",
+          "bodySite": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "10200004",
+                "display": "Liver structure"
+              }
+            ]
+          }
+        },
+        "processing": [
+          {
+            "description": "Processed and stored at liquid nitrogen, -150 to -196 degrees Celsius",
+            "extension": [
+              {
+                "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample-storage-temperature-extension",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-storage-temperature-cs",
+                      "code": "LN",
+                      "display": "liquid nitrogen, -150 to -196 degrees Celsius"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample-collection-extension",
+            "valueIdentifier": {
+              "system": "https://directory.bbmri-eric.eu/",
+              "value": "bbmri-eric:ID:biobank-SI-001:collection:collection-003"
+            }
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Specimen/sample-000003-01</b>: Tumor cell line, Liver structure, from Patient/donor-000003. Storage: liquid nitrogen, -150 to -196 degrees Celsius.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Specimen/sample-000003-01"
+      }
+    },
+    {
+      "fullUrl": "Specimen/sample-000004-01",
+      "resource": {
+        "resourceType": "Specimen",
+        "id": "sample-000004-01",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://example.org/biobank/sample-ids",
+            "value": "SAMPLE-000004-01"
+          }
+        ],
+        "type": {
+          "coding": [
+            {
+              "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-detailed-samply-type-cs",
+              "code": "Blood",
+              "display": "Whole blood"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/donor-000004"
+        },
+        "collection": {
+          "collectedDateTime": "2021-12-18T14:00:00+01:00",
+          "bodySite": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "76752008",
+                "display": "Breast structure"
+              }
+            ]
+          }
+        },
+        "processing": [
+          {
+            "description": "Processed and stored at -18 to -35 degrees Celsius",
+            "extension": [
+              {
+                "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample-storage-temperature-extension",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-storage-temperature-cs",
+                      "code": "minus18to35",
+                      "display": "-18 to -35 degrees Celsius"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample-collection-extension",
+            "valueIdentifier": {
+              "system": "https://directory.bbmri-eric.eu/",
+              "value": "bbmri-eric:ID:biobank-SI-001:collection:collection-001"
+            }
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Specimen/sample-000004-01</b>: Whole blood, Breast structure, from Patient/donor-000004. Storage: -18 to -35 degrees Celsius.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Specimen/sample-000004-01"
+      }
+    },
+    {
+      "fullUrl": "Specimen/sample-000004-02",
+      "resource": {
+        "resourceType": "Specimen",
+        "id": "sample-000004-02",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://example.org/biobank/sample-ids",
+            "value": "SAMPLE-000004-02"
+          }
+        ],
+        "type": {
+          "coding": [
+            {
+              "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-detailed-samply-type-cs",
+              "code": "Serum",
+              "display": "Serum"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/donor-000004"
+        },
+        "collection": {
+          "collectedDateTime": "2024-10-13T11:00:00+01:00",
+          "bodySite": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "76752008",
+                "display": "Breast structure"
+              }
+            ]
+          }
+        },
+        "processing": [
+          {
+            "description": "Processed and stored at -60 to -85 degrees Celsius",
+            "extension": [
+              {
+                "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample-storage-temperature-extension",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-storage-temperature-cs",
+                      "code": "minus60to85",
+                      "display": "-60 to -85 degrees Celsius"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample-collection-extension",
+            "valueIdentifier": {
+              "system": "https://directory.bbmri-eric.eu/",
+              "value": "bbmri-eric:ID:biobank-SI-001:collection:collection-001"
+            }
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Specimen/sample-000004-02</b>: Serum, Breast structure, from Patient/donor-000004. Storage: -60 to -85 degrees Celsius.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Specimen/sample-000004-02"
+      }
+    },
+    {
+      "fullUrl": "Specimen/sample-000005-01",
+      "resource": {
+        "resourceType": "Specimen",
+        "id": "sample-000005-01",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://example.org/biobank/sample-ids",
+            "value": "SAMPLE-000005-01"
+          }
+        ],
+        "type": {
+          "coding": [
+            {
+              "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-detailed-samply-type-cs",
+              "code": "RNA",
+              "display": "RNA"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/donor-000005"
+        },
+        "collection": {
+          "collectedDateTime": "2024-10-15T14:00:00+01:00",
+          "bodySite": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "34402009",
+                "display": "Rectum structure"
+              }
+            ]
+          }
+        },
+        "processing": [
+          {
+            "description": "Processed and stored at -60 to -85 degrees Celsius",
+            "extension": [
+              {
+                "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample-storage-temperature-extension",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-storage-temperature-cs",
+                      "code": "minus60to85",
+                      "display": "-60 to -85 degrees Celsius"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample-collection-extension",
+            "valueIdentifier": {
+              "system": "https://directory.bbmri-eric.eu/",
+              "value": "bbmri-eric:ID:biobank-DE-002:collection:collection-002"
+            }
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Specimen/sample-000005-01</b>: RNA, Rectum structure, from Patient/donor-000005. Storage: -60 to -85 degrees Celsius.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Specimen/sample-000005-01"
+      }
+    },
+    {
+      "fullUrl": "Specimen/sample-000006-01",
+      "resource": {
+        "resourceType": "Specimen",
+        "id": "sample-000006-01",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://example.org/biobank/sample-ids",
+            "value": "SAMPLE-000006-01"
+          }
+        ],
+        "type": {
+          "coding": [
+            {
+              "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-detailed-samply-type-cs",
+              "code": "BuffyCoat",
+              "display": "Buffy coat"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/donor-000006"
+        },
+        "collection": {
+          "collectedDateTime": "2018-12-24T10:00:00+01:00",
+          "bodySite": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "89837001",
+                "display": "Urinary bladder structure"
+              }
+            ]
+          }
+        },
+        "processing": [
+          {
+            "description": "Processed and stored at -60 to -85 degrees Celsius",
+            "extension": [
+              {
+                "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample-storage-temperature-extension",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-storage-temperature-cs",
+                      "code": "minus60to85",
+                      "display": "-60 to -85 degrees Celsius"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample-collection-extension",
+            "valueIdentifier": {
+              "system": "https://directory.bbmri-eric.eu/",
+              "value": "bbmri-eric:ID:biobank-SI-001:collection:collection-003"
+            }
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Specimen/sample-000006-01</b>: Buffy coat, Urinary bladder structure, from Patient/donor-000006. Storage: -60 to -85 degrees Celsius.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Specimen/sample-000006-01"
+      }
+    },
+    {
+      "fullUrl": "Specimen/sample-000007-01",
+      "resource": {
+        "resourceType": "Specimen",
+        "id": "sample-000007-01",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://example.org/biobank/sample-ids",
+            "value": "SAMPLE-000007-01"
+          }
+        ],
+        "type": {
+          "coding": [
+            {
+              "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-detailed-samply-type-cs",
+              "code": "Saliva",
+              "display": "Saliva"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/donor-000007"
+        },
+        "collection": {
+          "collectedDateTime": "2023-08-01T07:00:00+01:00",
+          "bodySite": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "14016003",
+                "display": "Skin structure of trunk"
+              }
+            ]
+          }
+        },
+        "processing": [
+          {
+            "description": "Processed and stored at 2 to 10 degrees Celsius",
+            "extension": [
+              {
+                "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample-storage-temperature-extension",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-storage-temperature-cs",
+                      "code": "2to10",
+                      "display": "2 to 10 degrees Celsius"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample-collection-extension",
+            "valueIdentifier": {
+              "system": "https://directory.bbmri-eric.eu/",
+              "value": "bbmri-eric:ID:biobank-SI-001:collection:collection-001"
+            }
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Specimen/sample-000007-01</b>: Saliva, Skin structure of trunk, from Patient/donor-000007. Storage: 2 to 10 degrees Celsius.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Specimen/sample-000007-01"
+      }
+    },
+    {
+      "fullUrl": "Specimen/sample-000008-01",
+      "resource": {
+        "resourceType": "Specimen",
+        "id": "sample-000008-01",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://example.org/biobank/sample-ids",
+            "value": "SAMPLE-000008-01"
+          }
+        ],
+        "type": {
+          "coding": [
+            {
+              "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-detailed-samply-type-cs",
+              "code": "Blood",
+              "display": "Whole blood"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/donor-000008"
+        },
+        "collection": {
+          "collectedDateTime": "2022-09-28T15:00:00+01:00",
+          "bodySite": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "69748006",
+                "display": "Thyroid structure"
+              }
+            ]
+          }
+        },
+        "processing": [
+          {
+            "description": "Processed and stored at -18 to -35 degrees Celsius",
+            "extension": [
+              {
+                "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample-storage-temperature-extension",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-storage-temperature-cs",
+                      "code": "minus18to35",
+                      "display": "-18 to -35 degrees Celsius"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample-collection-extension",
+            "valueIdentifier": {
+              "system": "https://directory.bbmri-eric.eu/",
+              "value": "bbmri-eric:ID:biobank-DE-002:collection:collection-002"
+            }
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Specimen/sample-000008-01</b>: Whole blood, Thyroid structure, from Patient/donor-000008. Storage: -18 to -35 degrees Celsius.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Specimen/sample-000008-01"
+      }
+    },
+    {
+      "fullUrl": "Specimen/sample-000008-02",
+      "resource": {
+        "resourceType": "Specimen",
+        "id": "sample-000008-02",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://example.org/biobank/sample-ids",
+            "value": "SAMPLE-000008-02"
+          }
+        ],
+        "type": {
+          "coding": [
+            {
+              "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-detailed-samply-type-cs",
+              "code": "RNA",
+              "display": "RNA"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/donor-000008"
+        },
+        "collection": {
+          "collectedDateTime": "2021-09-25T17:00:00+01:00",
+          "bodySite": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "69748006",
+                "display": "Thyroid structure"
+              }
+            ]
+          }
+        },
+        "processing": [
+          {
+            "description": "Processed and stored at -60 to -85 degrees Celsius",
+            "extension": [
+              {
+                "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample-storage-temperature-extension",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-storage-temperature-cs",
+                      "code": "minus60to85",
+                      "display": "-60 to -85 degrees Celsius"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample-collection-extension",
+            "valueIdentifier": {
+              "system": "https://directory.bbmri-eric.eu/",
+              "value": "bbmri-eric:ID:biobank-DE-002:collection:collection-002"
+            }
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Specimen/sample-000008-02</b>: RNA, Thyroid structure, from Patient/donor-000008. Storage: -60 to -85 degrees Celsius.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Specimen/sample-000008-02"
+      }
+    },
+    {
+      "fullUrl": "Specimen/sample-000008-03",
+      "resource": {
+        "resourceType": "Specimen",
+        "id": "sample-000008-03",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://example.org/biobank/sample-ids",
+            "value": "SAMPLE-000008-03"
+          }
+        ],
+        "type": {
+          "coding": [
+            {
+              "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-detailed-samply-type-cs",
+              "code": "Plasma",
+              "display": "Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/donor-000008"
+        },
+        "collection": {
+          "collectedDateTime": "2022-07-22T16:00:00+01:00",
+          "bodySite": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "69748006",
+                "display": "Thyroid structure"
+              }
+            ]
+          }
+        },
+        "processing": [
+          {
+            "description": "Processed and stored at -60 to -85 degrees Celsius",
+            "extension": [
+              {
+                "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample-storage-temperature-extension",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-storage-temperature-cs",
+                      "code": "minus60to85",
+                      "display": "-60 to -85 degrees Celsius"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample-collection-extension",
+            "valueIdentifier": {
+              "system": "https://directory.bbmri-eric.eu/",
+              "value": "bbmri-eric:ID:biobank-DE-002:collection:collection-002"
+            }
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Specimen/sample-000008-03</b>: Plasma, Thyroid structure, from Patient/donor-000008. Storage: -60 to -85 degrees Celsius.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Specimen/sample-000008-03"
+      }
+    },
+    {
+      "fullUrl": "Specimen/sample-000009-01",
+      "resource": {
+        "resourceType": "Specimen",
+        "id": "sample-000009-01",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://example.org/biobank/sample-ids",
+            "value": "SAMPLE-000009-01"
+          }
+        ],
+        "type": {
+          "coding": [
+            {
+              "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-detailed-samply-type-cs",
+              "code": "TissueFFPE",
+              "display": "Tissue (FFPE)"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/donor-000009"
+        },
+        "collection": {
+          "collectedDateTime": "2018-04-03T06:00:00+01:00",
+          "bodySite": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "71854001",
+                "display": "Colon structure"
+              }
+            ]
+          }
+        },
+        "processing": [
+          {
+            "description": "Processed and stored at Room temperature",
+            "extension": [
+              {
+                "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample-storage-temperature-extension",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-storage-temperature-cs",
+                      "code": "RT",
+                      "display": "Room temperature"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample-collection-extension",
+            "valueIdentifier": {
+              "system": "https://directory.bbmri-eric.eu/",
+              "value": "bbmri-eric:ID:biobank-SI-001:collection:collection-003"
+            }
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Specimen/sample-000009-01</b>: Tissue (FFPE), Colon structure, from Patient/donor-000009. Storage: Room temperature.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Specimen/sample-000009-01"
+      }
+    },
+    {
+      "fullUrl": "Specimen/sample-000010-01",
+      "resource": {
+        "resourceType": "Specimen",
+        "id": "sample-000010-01",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://example.org/biobank/sample-ids",
+            "value": "SAMPLE-000010-01"
+          }
+        ],
+        "type": {
+          "coding": [
+            {
+              "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-detailed-samply-type-cs",
+              "code": "BuffyCoat",
+              "display": "Buffy coat"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/donor-000010"
+        },
+        "collection": {
+          "collectedDateTime": "2021-08-26T12:00:00+01:00",
+          "bodySite": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "32849002",
+                "display": "Oesophageal structure"
+              }
+            ]
+          }
+        },
+        "processing": [
+          {
+            "description": "Processed and stored at -60 to -85 degrees Celsius",
+            "extension": [
+              {
+                "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample-storage-temperature-extension",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-storage-temperature-cs",
+                      "code": "minus60to85",
+                      "display": "-60 to -85 degrees Celsius"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample-collection-extension",
+            "valueIdentifier": {
+              "system": "https://directory.bbmri-eric.eu/",
+              "value": "bbmri-eric:ID:biobank-SI-001:collection:collection-001"
+            }
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Specimen/sample-000010-01</b>: Buffy coat, Oesophageal structure, from Patient/donor-000010. Storage: -60 to -85 degrees Celsius.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Specimen/sample-000010-01"
+      }
+    },
+    {
+      "fullUrl": "Specimen/sample-000010-02",
+      "resource": {
+        "resourceType": "Specimen",
+        "id": "sample-000010-02",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://example.org/biobank/sample-ids",
+            "value": "SAMPLE-000010-02"
+          }
+        ],
+        "type": {
+          "coding": [
+            {
+              "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-detailed-samply-type-cs",
+              "code": "Plasma",
+              "display": "Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/donor-000010"
+        },
+        "collection": {
+          "collectedDateTime": "2019-02-22T12:00:00+01:00",
+          "bodySite": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "32849002",
+                "display": "Oesophageal structure"
+              }
+            ]
+          }
+        },
+        "processing": [
+          {
+            "description": "Processed and stored at -60 to -85 degrees Celsius",
+            "extension": [
+              {
+                "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample-storage-temperature-extension",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-storage-temperature-cs",
+                      "code": "minus60to85",
+                      "display": "-60 to -85 degrees Celsius"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample-collection-extension",
+            "valueIdentifier": {
+              "system": "https://directory.bbmri-eric.eu/",
+              "value": "bbmri-eric:ID:biobank-SI-001:collection:collection-001"
+            }
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Specimen/sample-000010-02</b>: Plasma, Oesophageal structure, from Patient/donor-000010. Storage: -60 to -85 degrees Celsius.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Specimen/sample-000010-02"
+      }
+    },
+    {
+      "fullUrl": "Specimen/sample-000010-03",
+      "resource": {
+        "resourceType": "Specimen",
+        "id": "sample-000010-03",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://example.org/biobank/sample-ids",
+            "value": "SAMPLE-000010-03"
+          }
+        ],
+        "type": {
+          "coding": [
+            {
+              "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-detailed-samply-type-cs",
+              "code": "DNA",
+              "display": "DNA"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/donor-000010"
+        },
+        "collection": {
+          "collectedDateTime": "2024-07-15T17:00:00+01:00",
+          "bodySite": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "32849002",
+                "display": "Oesophageal structure"
+              }
+            ]
+          }
+        },
+        "processing": [
+          {
+            "description": "Processed and stored at -18 to -35 degrees Celsius",
+            "extension": [
+              {
+                "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample-storage-temperature-extension",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "https://fhir.bbmri-eric.eu/CodeSystem/miabis-storage-temperature-cs",
+                      "code": "minus18to35",
+                      "display": "-18 to -35 degrees Celsius"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-sample-collection-extension",
+            "valueIdentifier": {
+              "system": "https://directory.bbmri-eric.eu/",
+              "value": "bbmri-eric:ID:biobank-SI-001:collection:collection-001"
+            }
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Specimen/sample-000010-03</b>: DNA, Oesophageal structure, from Patient/donor-000010. Storage: -18 to -35 degrees Celsius.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Specimen/sample-000010-03"
+      }
+    },
+    {
+      "fullUrl": "DiagnosticReport/diagreport-000001",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "diagreport-000001",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "22637-3",
+              "display": "Pathology report final diagnosis Narrative"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/donor-000001"
+        },
+        "effectiveDateTime": "2022-11-20",
+        "specimen": [
+          {
+            "reference": "Specimen/sample-000001-01"
+          },
+          {
+            "reference": "Specimen/sample-000001-02"
+          }
+        ],
+        "conclusion": "Histopathological examination consistent with Breast, unspecified (C50.9).",
+        "conclusionCode": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10",
+                "code": "C50.9",
+                "display": "Breast, unspecified"
+              }
+            ]
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>DiagnosticReport/diagreport-000001</b>: Pathology report. Histopathological examination consistent with Breast, unspecified (C50.9)..</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "DiagnosticReport/diagreport-000001"
+      }
+    },
+    {
+      "fullUrl": "DiagnosticReport/diagreport-000002",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "diagreport-000002",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "22637-3",
+              "display": "Pathology report final diagnosis Narrative"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/donor-000002"
+        },
+        "effectiveDateTime": "2022-12-22",
+        "specimen": [
+          {
+            "reference": "Specimen/sample-000002-01"
+          },
+          {
+            "reference": "Specimen/sample-000002-02"
+          }
+        ],
+        "conclusion": "Histopathological examination consistent with Breast, unspecified (C50.9).",
+        "conclusionCode": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10",
+                "code": "C50.9",
+                "display": "Breast, unspecified"
+              }
+            ]
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>DiagnosticReport/diagreport-000002</b>: Pathology report. Histopathological examination consistent with Breast, unspecified (C50.9)..</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "DiagnosticReport/diagreport-000002"
+      }
+    },
+    {
+      "fullUrl": "DiagnosticReport/diagreport-000003",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "diagreport-000003",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "22637-3",
+              "display": "Pathology report final diagnosis Narrative"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/donor-000003"
+        },
+        "effectiveDateTime": "2023-07-09",
+        "specimen": [
+          {
+            "reference": "Specimen/sample-000003-01"
+          }
+        ],
+        "conclusion": "Histopathological examination consistent with Liver cell carcinoma (C22.0).",
+        "conclusionCode": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10",
+                "code": "C22.0",
+                "display": "Liver cell carcinoma"
+              }
+            ]
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>DiagnosticReport/diagreport-000003</b>: Pathology report. Histopathological examination consistent with Liver cell carcinoma (C22.0)..</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "DiagnosticReport/diagreport-000003"
+      }
+    },
+    {
+      "fullUrl": "DiagnosticReport/diagreport-000004",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "diagreport-000004",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "22637-3",
+              "display": "Pathology report final diagnosis Narrative"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/donor-000004"
+        },
+        "effectiveDateTime": "2021-03-17",
+        "specimen": [
+          {
+            "reference": "Specimen/sample-000004-01"
+          },
+          {
+            "reference": "Specimen/sample-000004-02"
+          }
+        ],
+        "conclusion": "Histopathological examination consistent with Upper-outer quadrant of breast (C50.4).",
+        "conclusionCode": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10",
+                "code": "C50.4",
+                "display": "Upper-outer quadrant of breast"
+              }
+            ]
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>DiagnosticReport/diagreport-000004</b>: Pathology report. Histopathological examination consistent with Upper-outer quadrant of breast (C5.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "DiagnosticReport/diagreport-000004"
+      }
+    },
+    {
+      "fullUrl": "DiagnosticReport/diagreport-000005",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "diagreport-000005",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "22637-3",
+              "display": "Pathology report final diagnosis Narrative"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/donor-000005"
+        },
+        "effectiveDateTime": "2022-09-28",
+        "specimen": [
+          {
+            "reference": "Specimen/sample-000005-01"
+          }
+        ],
+        "conclusion": "Histopathological examination consistent with Malignant neoplasm of rectum (C20).",
+        "conclusionCode": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10",
+                "code": "C20",
+                "display": "Malignant neoplasm of rectum"
+              }
+            ]
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>DiagnosticReport/diagreport-000005</b>: Pathology report. Histopathological examination consistent with Malignant neoplasm of rectum (C20).</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "DiagnosticReport/diagreport-000005"
+      }
+    },
+    {
+      "fullUrl": "DiagnosticReport/diagreport-000006",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "diagreport-000006",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "22637-3",
+              "display": "Pathology report final diagnosis Narrative"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/donor-000006"
+        },
+        "effectiveDateTime": "2020-09-04",
+        "specimen": [
+          {
+            "reference": "Specimen/sample-000006-01"
+          }
+        ],
+        "conclusion": "Histopathological examination consistent with Bladder, unspecified (C67.9).",
+        "conclusionCode": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10",
+                "code": "C67.9",
+                "display": "Bladder, unspecified"
+              }
+            ]
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>DiagnosticReport/diagreport-000006</b>: Pathology report. Histopathological examination consistent with Bladder, unspecified (C67.9)..</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "DiagnosticReport/diagreport-000006"
+      }
+    },
+    {
+      "fullUrl": "DiagnosticReport/diagreport-000007",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "diagreport-000007",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "22637-3",
+              "display": "Pathology report final diagnosis Narrative"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/donor-000007"
+        },
+        "effectiveDateTime": "2023-05-08",
+        "specimen": [
+          {
+            "reference": "Specimen/sample-000007-01"
+          }
+        ],
+        "conclusion": "Histopathological examination consistent with Malignant melanoma of trunk (C43.5).",
+        "conclusionCode": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10",
+                "code": "C43.5",
+                "display": "Malignant melanoma of trunk"
+              }
+            ]
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>DiagnosticReport/diagreport-000007</b>: Pathology report. Histopathological examination consistent with Malignant melanoma of trunk (C43.5.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "DiagnosticReport/diagreport-000007"
+      }
+    },
+    {
+      "fullUrl": "DiagnosticReport/diagreport-000008",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "diagreport-000008",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "22637-3",
+              "display": "Pathology report final diagnosis Narrative"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/donor-000008"
+        },
+        "effectiveDateTime": "2023-08-17",
+        "specimen": [
+          {
+            "reference": "Specimen/sample-000008-01"
+          },
+          {
+            "reference": "Specimen/sample-000008-02"
+          },
+          {
+            "reference": "Specimen/sample-000008-03"
+          }
+        ],
+        "conclusion": "Histopathological examination consistent with Malignant neoplasm of thyroid gland (C73).",
+        "conclusionCode": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10",
+                "code": "C73",
+                "display": "Malignant neoplasm of thyroid gland"
+              }
+            ]
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>DiagnosticReport/diagreport-000008</b>: Pathology report. Histopathological examination consistent with Malignant neoplasm of thyroid glan.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "DiagnosticReport/diagreport-000008"
+      }
+    },
+    {
+      "fullUrl": "DiagnosticReport/diagreport-000009",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "diagreport-000009",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "22637-3",
+              "display": "Pathology report final diagnosis Narrative"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/donor-000009"
+        },
+        "effectiveDateTime": "2023-02-17",
+        "specimen": [
+          {
+            "reference": "Specimen/sample-000009-01"
+          }
+        ],
+        "conclusion": "Histopathological examination consistent with Sigmoid colon (C18.7).",
+        "conclusionCode": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10",
+                "code": "C18.7",
+                "display": "Sigmoid colon"
+              }
+            ]
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>DiagnosticReport/diagreport-000009</b>: Pathology report. Histopathological examination consistent with Sigmoid colon (C18.7)..</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "DiagnosticReport/diagreport-000009"
+      }
+    },
+    {
+      "fullUrl": "DiagnosticReport/diagreport-000010",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "diagreport-000010",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "22637-3",
+              "display": "Pathology report final diagnosis Narrative"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/donor-000010"
+        },
+        "effectiveDateTime": "2018-11-21",
+        "specimen": [
+          {
+            "reference": "Specimen/sample-000010-01"
+          },
+          {
+            "reference": "Specimen/sample-000010-02"
+          },
+          {
+            "reference": "Specimen/sample-000010-03"
+          }
+        ],
+        "conclusion": "Histopathological examination consistent with Oesophagus, unspecified (C15.9).",
+        "conclusionCode": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10",
+                "code": "C15.9",
+                "display": "Oesophagus, unspecified"
+              }
+            ]
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>DiagnosticReport/diagreport-000010</b>: Pathology report. Histopathological examination consistent with Oesophagus, unspecified (C15.9)..</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "DiagnosticReport/diagreport-000010"
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-000001-01",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-000001-01",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-observation"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "52797-8"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/donor-000001"
+        },
+        "specimen": {
+          "reference": "Specimen/sample-000001-01"
+        },
+        "effectiveDateTime": "2022-11-20",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "C50.9",
+              "display": "Breast, unspecified"
+            }
+          ]
+        },
+        "performer": [
+          {
+            "reference": "Organization/biobank-SI-001"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Observation/obs-000001-01</b>: Diagnosis for Specimen/sample-000001-01: C50.9.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/obs-000001-01"
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-000001-02",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-000001-02",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-observation"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "52797-8"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/donor-000001"
+        },
+        "specimen": {
+          "reference": "Specimen/sample-000001-02"
+        },
+        "effectiveDateTime": "2022-11-20",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "C50.9",
+              "display": "Breast, unspecified"
+            }
+          ]
+        },
+        "performer": [
+          {
+            "reference": "Organization/biobank-SI-001"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Observation/obs-000001-02</b>: Diagnosis for Specimen/sample-000001-02: C50.9.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/obs-000001-02"
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-000002-01",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-000002-01",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-observation"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "52797-8"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/donor-000002"
+        },
+        "specimen": {
+          "reference": "Specimen/sample-000002-01"
+        },
+        "effectiveDateTime": "2022-12-22",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "C50.9",
+              "display": "Breast, unspecified"
+            }
+          ]
+        },
+        "performer": [
+          {
+            "reference": "Organization/biobank-DE-002"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Observation/obs-000002-01</b>: Diagnosis for Specimen/sample-000002-01: C50.9.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/obs-000002-01"
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-000002-02",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-000002-02",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-observation"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "52797-8"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/donor-000002"
+        },
+        "specimen": {
+          "reference": "Specimen/sample-000002-02"
+        },
+        "effectiveDateTime": "2022-12-22",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "C50.9",
+              "display": "Breast, unspecified"
+            }
+          ]
+        },
+        "performer": [
+          {
+            "reference": "Organization/biobank-DE-002"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Observation/obs-000002-02</b>: Diagnosis for Specimen/sample-000002-02: C50.9.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/obs-000002-02"
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-000003-01",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-000003-01",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-observation"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "52797-8"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/donor-000003"
+        },
+        "specimen": {
+          "reference": "Specimen/sample-000003-01"
+        },
+        "effectiveDateTime": "2023-07-09",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "C22.0",
+              "display": "Liver cell carcinoma"
+            }
+          ]
+        },
+        "performer": [
+          {
+            "reference": "Organization/biobank-SI-001"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Observation/obs-000003-01</b>: Diagnosis for Specimen/sample-000003-01: C22.0.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/obs-000003-01"
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-000004-01",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-000004-01",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-observation"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "52797-8"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/donor-000004"
+        },
+        "specimen": {
+          "reference": "Specimen/sample-000004-01"
+        },
+        "effectiveDateTime": "2021-03-17",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "C50.4",
+              "display": "Upper-outer quadrant of breast"
+            }
+          ]
+        },
+        "performer": [
+          {
+            "reference": "Organization/biobank-DE-002"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Observation/obs-000004-01</b>: Diagnosis for Specimen/sample-000004-01: C50.4.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/obs-000004-01"
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-000004-02",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-000004-02",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-observation"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "52797-8"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/donor-000004"
+        },
+        "specimen": {
+          "reference": "Specimen/sample-000004-02"
+        },
+        "effectiveDateTime": "2021-03-17",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "C50.4",
+              "display": "Upper-outer quadrant of breast"
+            }
+          ]
+        },
+        "performer": [
+          {
+            "reference": "Organization/biobank-DE-002"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Observation/obs-000004-02</b>: Diagnosis for Specimen/sample-000004-02: C50.4.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/obs-000004-02"
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-000005-01",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-000005-01",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-observation"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "52797-8"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/donor-000005"
+        },
+        "specimen": {
+          "reference": "Specimen/sample-000005-01"
+        },
+        "effectiveDateTime": "2022-09-28",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "C20",
+              "display": "Malignant neoplasm of rectum"
+            }
+          ]
+        },
+        "performer": [
+          {
+            "reference": "Organization/biobank-SI-001"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Observation/obs-000005-01</b>: Diagnosis for Specimen/sample-000005-01: C20.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/obs-000005-01"
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-000006-01",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-000006-01",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-observation"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "52797-8"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/donor-000006"
+        },
+        "specimen": {
+          "reference": "Specimen/sample-000006-01"
+        },
+        "effectiveDateTime": "2020-09-04",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "C67.9",
+              "display": "Bladder, unspecified"
+            }
+          ]
+        },
+        "performer": [
+          {
+            "reference": "Organization/biobank-DE-002"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Observation/obs-000006-01</b>: Diagnosis for Specimen/sample-000006-01: C67.9.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/obs-000006-01"
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-000007-01",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-000007-01",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-observation"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "52797-8"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/donor-000007"
+        },
+        "specimen": {
+          "reference": "Specimen/sample-000007-01"
+        },
+        "effectiveDateTime": "2023-05-08",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "C43.5",
+              "display": "Malignant melanoma of trunk"
+            }
+          ]
+        },
+        "performer": [
+          {
+            "reference": "Organization/biobank-SI-001"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Observation/obs-000007-01</b>: Diagnosis for Specimen/sample-000007-01: C43.5.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/obs-000007-01"
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-000008-01",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-000008-01",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-observation"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "52797-8"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/donor-000008"
+        },
+        "specimen": {
+          "reference": "Specimen/sample-000008-01"
+        },
+        "effectiveDateTime": "2023-08-17",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "C73",
+              "display": "Malignant neoplasm of thyroid gland"
+            }
+          ]
+        },
+        "performer": [
+          {
+            "reference": "Organization/biobank-DE-002"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Observation/obs-000008-01</b>: Diagnosis for Specimen/sample-000008-01: C73.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/obs-000008-01"
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-000008-02",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-000008-02",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-observation"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "52797-8"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/donor-000008"
+        },
+        "specimen": {
+          "reference": "Specimen/sample-000008-02"
+        },
+        "effectiveDateTime": "2023-08-17",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "C73",
+              "display": "Malignant neoplasm of thyroid gland"
+            }
+          ]
+        },
+        "performer": [
+          {
+            "reference": "Organization/biobank-DE-002"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Observation/obs-000008-02</b>: Diagnosis for Specimen/sample-000008-02: C73.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/obs-000008-02"
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-000008-03",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-000008-03",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-observation"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "52797-8"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/donor-000008"
+        },
+        "specimen": {
+          "reference": "Specimen/sample-000008-03"
+        },
+        "effectiveDateTime": "2023-08-17",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "C73",
+              "display": "Malignant neoplasm of thyroid gland"
+            }
+          ]
+        },
+        "performer": [
+          {
+            "reference": "Organization/biobank-DE-002"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Observation/obs-000008-03</b>: Diagnosis for Specimen/sample-000008-03: C73.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/obs-000008-03"
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-000009-01",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-000009-01",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-observation"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "52797-8"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/donor-000009"
+        },
+        "specimen": {
+          "reference": "Specimen/sample-000009-01"
+        },
+        "effectiveDateTime": "2023-02-17",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "C18.7",
+              "display": "Sigmoid colon"
+            }
+          ]
+        },
+        "performer": [
+          {
+            "reference": "Organization/biobank-SI-001"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Observation/obs-000009-01</b>: Diagnosis for Specimen/sample-000009-01: C18.7.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/obs-000009-01"
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-000010-01",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-000010-01",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-observation"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "52797-8"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/donor-000010"
+        },
+        "specimen": {
+          "reference": "Specimen/sample-000010-01"
+        },
+        "effectiveDateTime": "2018-11-21",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "C15.9",
+              "display": "Oesophagus, unspecified"
+            }
+          ]
+        },
+        "performer": [
+          {
+            "reference": "Organization/biobank-DE-002"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Observation/obs-000010-01</b>: Diagnosis for Specimen/sample-000010-01: C15.9.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/obs-000010-01"
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-000010-02",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-000010-02",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-observation"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "52797-8"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/donor-000010"
+        },
+        "specimen": {
+          "reference": "Specimen/sample-000010-02"
+        },
+        "effectiveDateTime": "2018-11-21",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "C15.9",
+              "display": "Oesophagus, unspecified"
+            }
+          ]
+        },
+        "performer": [
+          {
+            "reference": "Organization/biobank-DE-002"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Observation/obs-000010-02</b>: Diagnosis for Specimen/sample-000010-02: C15.9.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/obs-000010-02"
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-000010-03",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-000010-03",
+        "meta": {
+          "profile": [
+            "https://fhir.bbmri-eric.eu/StructureDefinition/miabis-observation"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "52797-8"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/donor-000010"
+        },
+        "specimen": {
+          "reference": "Specimen/sample-000010-03"
+        },
+        "effectiveDateTime": "2018-11-21",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "C15.9",
+              "display": "Oesophagus, unspecified"
+            }
+          ]
+        },
+        "performer": [
+          {
+            "reference": "Organization/biobank-DE-002"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Observation/obs-000010-03</b>: Diagnosis for Specimen/sample-000010-03: C15.9.</p></div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/obs-000010-03"
+      }
+    }
+  ]
+}
