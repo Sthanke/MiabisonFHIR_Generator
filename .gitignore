@@ -13,9 +13,11 @@ dist/
 build/
 .eggs/
 
-# Generated output bundles (except the example)
-miabis-bundle-[^1]*.json
-miabis-bundle-1[^0]*.json
+# Generated output bundles
+bundles/*.json
+
+# Validation working directory (IG clone, validator jar, reports)
+miabis-validation/
 
 # IDE / Editor
 .idea/
