@@ -21,7 +21,8 @@ Usage:
     python3 generate-miabis-bundle.py --donors 100 --biobanks 3 --collections 5
 """
 
-import argparse, json, random, uuid
+import argparse, json, os, random, uuid
+from pathlib import Path
 
 BASE = "https://fhir.bbmri-eric.eu"
 
@@ -441,14 +442,20 @@ def generate_bundle(num_donors, num_biobanks=1, num_collections=1, seed=None):
 def main():
     parser = argparse.ArgumentParser(description="Generate a MIABIS on FHIR transaction bundle.",
         formatter_class=argparse.RawDescriptionHelpFormatter,
-        epilog="Examples:\n  python3 generate-miabis-bundle.py --donors 10\n  python3 generate-miabis-bundle.py --donors 50 --biobanks 3 --collections 5\n  python3 generate-miabis-bundle.py --donors 100 --output large-bundle.json --seed 42")
+        epilog="Examples:\n  python generate-miabis-bundle.py --donors 10\n  python generate-miabis-bundle.py --donors 50 --biobanks 3 --collections 5\n  python generate-miabis-bundle.py --donors 100 --output my-bundle.json --seed 42")
     parser.add_argument("--donors",type=int,required=True,help="Number of sample donors")
     parser.add_argument("--biobanks",type=int,default=1,help="Number of biobanks (default: 1)")
     parser.add_argument("--collections",type=int,default=1,help="Number of collections (default: 1)")
-    parser.add_argument("--output",type=str,default=None,help="Output file")
+    parser.add_argument("--output",type=str,default=None,help="Output file (default: bundles/miabis-bundle-<N>donors.json)")
     parser.add_argument("--seed",type=int,default=None,help="Random seed")
     args = parser.parse_args()
-    if args.output is None: args.output = f"miabis-bundle-{args.donors}donors.json"
+
+    # Default output goes into bundles/ next to this script
+    if args.output is None:
+        script_dir = Path(__file__).resolve().parent
+        bundles_dir = script_dir / "bundles"
+        bundles_dir.mkdir(exist_ok=True)
+        args.output = str(bundles_dir / f"miabis-bundle-{args.donors}donors.json")
 
     print(f"Generating MIABIS on FHIR transaction bundle...")
     print(f"  Donors: {args.donors}  Biobanks: {args.biobanks}  Collections: {args.collections}  Seed: {args.seed or 'random'}")
@@ -461,7 +468,7 @@ def main():
     print(f"\n  Output: {args.output}  Total: {len(bundle['entry'])} resources")
     for rt in ["Organization","Group","Patient","Condition","Specimen","DiagnosticReport","Observation"]:
         if rt in tc: print(f"    {rt}: {tc[rt]}")
-    print(f"\nValidate with:\n  java -jar validator_cli.jar {args.output} \\\n    -ig miabis-on-fhir/fsh-generated/resources \\\n    -version 4.0.1 -allow-example-urls true \\\n    -extension http://example.org/")
+    print(f"\nValidate with:\n  python validate-miabis.py {args.output}")
 
 if __name__ == "__main__":
     main()
