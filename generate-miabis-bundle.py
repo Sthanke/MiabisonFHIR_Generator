@@ -75,7 +75,7 @@ BODY_SITES = [
     ("15776009","Pancreatic structure"),("15497006","Ovarian structure"),
     ("64033007","Kidney structure"),("69695003","Stomach structure"),
     ("89837001","Urinary bladder structure"),("12738006","Brain structure"),
-    ("69748006","Thyroid structure"),("14016003","Skin structure of trunk"),
+    ("69748006","Thyroid structure"),("39937001","Skin structure"),
     ("10200004","Liver structure"),("32849002","Oesophageal structure"),
     ("34402009","Rectum structure"),
 ]
@@ -84,7 +84,7 @@ ICD10_BODYSITE = {
     "C34":"39607008","C50":"76752008","C18":"71854001","C20":"34402009",
     "C61":"41216001","C25":"15776009","C56":"15497006","C64":"64033007",
     "C16":"69695003","C67":"89837001","C71":"12738006","C73":"69748006",
-    "C43":"14016003","C22":"10200004","C15":"32849002",
+    "C43":"39937001","C22":"10200004","C15":"32849002",
 }
 
 # miabis-dataset-type-CS (donor-level)
@@ -158,6 +158,10 @@ _UUID_NS = uuid.UUID("6ba7b810-9dad-11d1-80b4-00c04fd430c8")
 
 def _uuid(rt, rid):
     return str(uuid.uuid5(_UUID_NS, f"{rt}/{rid}"))
+
+def ref(rt, rid):
+    """Return a urn:uuid: reference that matches the fullUrl of the entry for ResourceType/id."""
+    return f"urn:uuid:{_uuid(rt, rid)}"
 
 def narrative(rt, rid, summary):
     return {"status":"generated",
@@ -372,13 +376,13 @@ def generate_bundle(num_donors, num_biobanks=1, num_collections=1, seed=None):
         jp_id=f"juristic-person-{country}-{i+1:03d}"; bb_id=f"biobank-{country}-{i+1:03d}"
         bbmri_id=f"{country}_{bb_id.upper()}"; bb_name=f"{city} {random.choice(BIOBANK_SUFFIXES)}"
         jp_name=f"{city} University"
-        jp_ids.append(jp_id); bb_ids.append(bb_id); bb_refs.append(f"Organization/{bb_id}")
+        jp_ids.append(jp_id); bb_ids.append(bb_id); bb_refs.append(ref("Organization",bb_id))
         entries.append(make_entry(build_juristic_person(jp_id,jp_name,country,city)))
-        entries.append(make_entry(build_biobank(bb_id,bb_name,country,city,f"Organization/{jp_id}",bbmri_id)))
+        entries.append(make_entry(build_biobank(bb_id,bb_name,country,city,ref("Organization",jp_id),bbmri_id)))
 
     net_jp=jp_ids[0]; net_country=countries_used[0]
-    entries.append(make_entry(build_network_org("network-org-001","BBMRI-ERIC Network Organization",f"Organization/{net_jp}",net_country)))
-    entries.append(make_entry(build_network("network-001",f"Organization/network-org-001",bb_refs)))
+    entries.append(make_entry(build_network_org("network-org-001","BBMRI-ERIC Network Organization",ref("Organization",net_jp),net_country)))
+    entries.append(make_entry(build_network("network-001",ref("Organization","network-org-001"),bb_refs)))
 
     col_org_ids=[]; col_ids=[]; col_identifiers=[]
     for i in range(num_collections):
@@ -387,7 +391,7 @@ def generate_bundle(num_donors, num_biobanks=1, num_collections=1, seed=None):
         col_org_id=f"col-org-{i+1:03d}"; col_id=f"collection-{i+1:03d}"
         col_identifier=f"bbmri-eric:ID:{bb_id}:collection:{col_id}"
         col_org_ids.append(col_org_id); col_ids.append(col_id); col_identifiers.append(col_identifier)
-        entries.append(make_entry(build_collection_org(col_org_id,col_name,f"Organization/{bb_id}",country)))
+        entries.append(make_entry(build_collection_org(col_org_id,col_name,ref("Organization",bb_id),country)))
 
     donor_entries=[]; condition_entries=[]; specimen_entries=[]; dr_entries=[]; obs_entries=[]
     collection_specimen_map={cid:[] for cid in col_ids}
@@ -400,7 +404,7 @@ def generate_bundle(num_donors, num_biobanks=1, num_collections=1, seed=None):
 
         icd_code,icd_display=random.choice(ICD10_CODES)
         cond_id=f"condition-{d+1:06d}"
-        condition_entries.append(make_entry(build_condition(cond_id,f"Patient/{donor_id}",icd_code,icd_display)))
+        condition_entries.append(make_entry(build_condition(cond_id,ref("Patient",donor_id),icd_code,icd_display)))
 
         icd_prefix=icd_code.split(".")[0]
         bs_code=ICD10_BODYSITE.get(icd_prefix,"39607008")
@@ -413,26 +417,33 @@ def generate_bundle(num_donors, num_biobanks=1, num_collections=1, seed=None):
             storage_code=SAMPLE_STORAGE_MAP.get(st_code,"Other")
             collected=rdatetime(2018,2025); all_sample_type_codes.add(st_code)
             specimen_entries.append(make_entry(build_specimen(
-                spec_id,f"Patient/{donor_id}",st_code,st_display,bs_code,bs_display,collected,storage_code,col_identifiers[col_idx])))
-            donor_specimen_refs.append(f"Specimen/{spec_id}")
-            all_specimen_refs.append(f"Specimen/{spec_id}")
-            collection_specimen_map[col_ids[col_idx]].append(f"Specimen/{spec_id}")
+                spec_id,ref("Patient",donor_id),st_code,st_display,bs_code,bs_display,collected,storage_code,col_identifiers[col_idx])))
+            donor_specimen_refs.append(ref("Specimen",spec_id))
+            all_specimen_refs.append(ref("Specimen",spec_id))
+            collection_specimen_map[col_ids[col_idx]].append(ref("Specimen",spec_id))
 
         dr_id=f"diagreport-{d+1:06d}"; eff_date=rdate(2018,2025)
         conclusion=f"Histopathological examination consistent with {icd_display} ({icd_code})."
-        dr_entries.append(make_entry(build_diagnostic_report(dr_id,f"Patient/{donor_id}",donor_specimen_refs,icd_code,icd_display,eff_date,conclusion)))
+        dr_entries.append(make_entry(build_diagnostic_report(dr_id,ref("Patient",donor_id),donor_specimen_refs,icd_code,icd_display,eff_date,conclusion)))
 
         for s,spec_ref in enumerate(donor_specimen_refs):
             obs_id=f"obs-{d+1:06d}-{s+1:02d}"; bb_ref=bb_refs[d%num_biobanks]
-            obs_entries.append(make_entry(build_observation(obs_id,f"Patient/{donor_id}",spec_ref,bb_ref,icd_code,icd_display,eff_date)))
+            obs_entries.append(make_entry(build_observation(obs_id,ref("Patient",donor_id),spec_ref,bb_ref,icd_code,icd_display,eff_date)))
 
     col_group_entries=[]
     for i,col_id in enumerate(col_ids):
         spec_refs=collection_specimen_map[col_id]
-        num_subj=len(set(e["resource"]["subject"]["reference"] for e in specimen_entries
-                         if e["resource"]["id"] in [r.split("/")[1] for r in spec_refs]))
+        # Count distinct donors whose specimens are in this collection
+        spec_ids_in_col = set()
+        for sr in spec_refs:
+            # spec_refs are now urn:uuid: strings; extract the specimen id by reversing the uuid lookup
+            for e in specimen_entries:
+                if e["fullUrl"] == sr:
+                    spec_ids_in_col.add(e["resource"]["subject"]["reference"])
+                    break
+        num_subj = len(spec_ids_in_col)
         col_group_entries.append(make_entry(build_collection_group(
-            col_id,f"Organization/{col_org_ids[i]}",spec_refs,max(num_subj,1),all_sample_type_codes)))
+            col_id,ref("Organization",col_org_ids[i]),spec_refs,max(num_subj,1),all_sample_type_codes)))
 
     entries.extend(col_group_entries); entries.extend(donor_entries); entries.extend(condition_entries)
     entries.extend(specimen_entries); entries.extend(dr_entries); entries.extend(obs_entries)

@@ -210,27 +210,50 @@ def validate_file(json_file, ig_resources):
     result = subprocess.run(cmd, capture_output=True, text=True, shell=IS_WINDOWS)
     full_output = result.stdout + result.stderr
 
-    # Write log
+    # Write log (strip ANSI color codes for readability)
+    clean_output = _strip_ansi(full_output)
     with open(report_log, "w", encoding="utf-8") as f:
-        f.write(full_output)
+        f.write(clean_output)
 
-    # Also print to console
-    print(full_output)
+    # Also print clean output to console
+    print(clean_output)
 
-    # Parse counts from output
-    errors = _parse_count(r"(\d+)\s+error", full_output)
-    warnings = _parse_count(r"(\d+)\s+warning", full_output)
-    notes = _parse_count(r"(\d+)\s+note", full_output)
+    # Parse counts from the HTML report (the validator doesn't print them to stdout)
+    errors, warnings, notes = _parse_html_report(report_html)
 
     return errors, warnings, notes, report_log, report_html
 
 
-def _parse_count(pattern, text):
-    """Extract the last occurrence of a count pattern."""
-    matches = re.findall(pattern, text, re.IGNORECASE)
-    if matches:
-        return int(matches[-1])
-    return None
+def _strip_ansi(text):
+    """Remove ANSI escape sequences from text."""
+    return re.sub(r'\x1b\[[0-9;]*m', '', text)
+
+
+def _parse_html_report(report_path):
+    """Parse error/warning/information counts from the OperationOutcome HTML report.
+
+    The FHIR validator writes an OperationOutcome XML with <issue> elements
+    containing <severity value="error|warning|information"/> tags.
+    """
+    errors = 0
+    warnings = 0
+    notes = 0
+
+    if not report_path.exists():
+        return None, None, None
+
+    try:
+        with open(report_path, "r", encoding="utf-8") as f:
+            content = f.read()
+
+        # Count <severity value="..."/> occurrences in the OperationOutcome XML
+        errors = len(re.findall(r'<severity\s+value="error"\s*/>', content, re.IGNORECASE))
+        warnings = len(re.findall(r'<severity\s+value="warning"\s*/>', content, re.IGNORECASE))
+        notes = len(re.findall(r'<severity\s+value="information"\s*/>', content, re.IGNORECASE))
+    except Exception:
+        return None, None, None
+
+    return errors, warnings, notes
 
 
 def run_batch_validation(input_files):
