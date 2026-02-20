@@ -29,8 +29,8 @@ Generated bundles include the full MIABIS resource hierarchy — from juristic p
 
 ## Requirements
 
-- Python 3.8+ (no external dependencies)
-- For validation only: Java 17+, Git, Node.js 18+ (see [VALIDATION-GUIDE.md](VALIDATION-GUIDE.md))
+- Python 3.8+ (no external dependencies needed for generation)
+- For validation: Java 17+, Git, Node.js 18+ (details in [VALIDATION-GUIDE.md](VALIDATION-GUIDE.md))
 
 ## Installation
 
@@ -39,22 +39,25 @@ git clone https://github.com/sthanke/MiabisonFHIR_Generator.git
 cd MiabisonFHIR_Generator
 ```
 
+## Quick Start
+
+```bash
+# 1. Generate a bundle (saved to bundles/ by default)
+python generate-miabis-bundle.py --donors 10
+
+# 2. Validate it
+python validate-miabis.py
+```
+
 ## Generating Bundles
 
 ```bash
-# Generate a bundle with 10 donors (saved to bundles/miabis-bundle-10donors.json)
 python generate-miabis-bundle.py --donors 10
-
-# Multiple biobanks and collections
 python generate-miabis-bundle.py --donors 50 --biobanks 3 --collections 5
-
-# Custom output path and reproducible seed
 python generate-miabis-bundle.py --donors 100 --output my-bundle.json --seed 42
 ```
 
 Generated files are saved to the `bundles/` folder by default. Use `--output` to write to a custom path instead.
-
-### Generator Arguments
 
 | Argument | Required | Default | Description |
 |---|---|---|---|
@@ -64,33 +67,9 @@ Generated files are saved to the `bundles/` folder by default. Use `--output` to
 | `--output` | No | `bundles/miabis-bundle-<N>donors.json` | Output file path |
 | `--seed` | No | random | Random seed for reproducibility |
 
-### Example Output
-
-For 10 donors the bundle typically contains:
-
-- 2x Organization (juristic person + biobank)
-- 1x Organization (network org) + 1x Group (network)
-- 1x Organization (collection org) + 1x Group (collection)
-- 10x Patient (donors)
-- 10x Condition
-- 10-30x Specimen
-- 10x DiagnosticReport
-- 10-30x Observation
-
 ## Validating Bundles
 
-```bash
-# Validate all bundles in the bundles/ folder (default)
-python validate-miabis.py
-
-# Validate a specific file
-python validate-miabis.py bundles/miabis-bundle-10donors.json
-
-# Skip setup on subsequent runs (faster)
-python validate-miabis.py --skip-setup
-```
-
-The validation script automatically downloads the HL7 FHIR Validator and clones/builds the MIABIS on FHIR IG on first run. See [VALIDATION-GUIDE.md](VALIDATION-GUIDE.md) for full details on prerequisites, output format, and troubleshooting.
+See [VALIDATION-GUIDE.md](VALIDATION-GUIDE.md) for prerequisites, usage, output format, and troubleshooting.
 
 ## Project Structure
 
