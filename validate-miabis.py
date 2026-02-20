@@ -210,9 +210,9 @@ def validate_file(json_file, ig_resources):
     result = subprocess.run(cmd, capture_output=True, text=True, shell=IS_WINDOWS)
     full_output = result.stdout + result.stderr
 
-    # Write log
+    # Write log (strip ANSI color codes for readability)
     with open(report_log, "w", encoding="utf-8") as f:
-        f.write(full_output)
+        f.write(_strip_ansi(full_output))
 
     # Also print to console
     print(full_output)
@@ -225,9 +225,15 @@ def validate_file(json_file, ig_resources):
     return errors, warnings, notes, report_log, report_html
 
 
+def _strip_ansi(text):
+    """Remove ANSI escape sequences from text."""
+    return re.sub(r'\x1b\[[0-9;]*m', '', text)
+
+
 def _parse_count(pattern, text):
-    """Extract the last occurrence of a count pattern."""
-    matches = re.findall(pattern, text, re.IGNORECASE)
+    """Extract the last occurrence of a count pattern (strips ANSI codes first)."""
+    clean = _strip_ansi(text)
+    matches = re.findall(pattern, clean, re.IGNORECASE)
     if matches:
         return int(matches[-1])
     return None
