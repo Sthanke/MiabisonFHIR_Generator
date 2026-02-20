@@ -1,46 +1,35 @@
 # MIABIS on FHIR — Validation Guide
 
-## Quick Start
+This guide covers how to use `validate-miabis.py` to validate FHIR bundles against the MIABIS on FHIR IG. For generating bundles, see [README.md](README.md).
 
-```bash
-# 1. Put your JSON bundles in a folder
-mkdir bundles
-cp *.json bundles/
+## Prerequisites
 
-# 2. Run — validates every .json in the folder
-python validate-miabis.py bundles/
-```
+| Tool     | Minimum Version | Check command      | Install from                        |
+|----------|----------------|--------------------|-------------------------------------|
+| Python   | 3.8+           | `python --version` | https://python.org                  |
+| Java     | 17+            | `java -version`    | https://adoptium.net                |
+| Git      | any            | `git --version`    | https://git-scm.com                 |
+| Node.js  | 18+            | `node -v`          | https://nodejs.org                  |
 
-First run installs SUSHI, clones the IG, downloads the validator (~300 MB). Subsequent runs reuse the cached setup.
+All four must be on your system PATH.
 
 ## Usage
 
 ```bash
-# Validate all .json files in a folder
+# Validate all .json files in ./bundles/ (default)
+python validate-miabis.py
+
+# Validate all .json files in a specific folder
 python validate-miabis.py /path/to/folder
 
 # Validate a single file
 python validate-miabis.py /path/to/my-bundle.json
 
-# Default: validates all .json in ./bundles/
-python validate-miabis.py
-
-# Skip setup (reuse existing IG build + validator) — faster re-runs
-python validate-miabis.py --skip-setup bundles/
+# Skip setup on subsequent runs (reuse existing IG build + validator)
+python validate-miabis.py --skip-setup
 ```
 
 > Works on **Windows**, **macOS**, and **Linux** — no WSL or bash needed.
-
-## Prerequisites
-
-| Tool     | Minimum Version | Check command   | Install from                        |
-|----------|----------------|-----------------|-------------------------------------|
-| Python   | 3.8+           | `python --version` | https://python.org                |
-| Java     | 17+            | `java -version` | https://adoptium.net                |
-| Git      | any            | `git --version` | https://git-scm.com                |
-| Node.js  | 18+            | `node -v`       | https://nodejs.org                  |
-
-All four must be on your system PATH.
 
 ## What the Script Does
 
@@ -52,21 +41,19 @@ All four must be on your system PATH.
 6. **Validates each `.json` file** — checks every resource against its declared MIABIS profile
 7. **Produces per-file reports** — HTML + log for each file, plus a summary table
 
-Use `--skip-setup` on subsequent runs to skip steps 1–5 and go straight to validation.
+Use `--skip-setup` on subsequent runs to skip steps 1-5 and go straight to validation.
 
 ## Output Structure
 
 ```
 miabis-validation/
-├── miabis-on-fhir/          # cloned IG repo (cached)
-├── validator_cli.jar         # HL7 validator (cached, refreshed every 30 days)
-└── reports/
-    ├── validation-summary.txt                    # one-line-per-file table
-    ├── miabis-bundle-10donors-validation-report.html
-    ├── miabis-bundle-10donors-validation-log.txt
-    ├── miabis-bundle-50donors-validation-report.html
-    ├── miabis-bundle-50donors-validation-log.txt
-    └── ...
+  miabis-on-fhir/          # cloned IG repo (cached)
+  validator_cli.jar         # HL7 validator (cached, refreshed every 30 days)
+  reports/
+    validation-summary.txt                    # one-line-per-file table
+    miabis-bundle-10donors-validation-report.html
+    miabis-bundle-10donors-validation-log.txt
+    ...
 ```
 
 ### Summary file example
@@ -116,20 +103,6 @@ Each issue shows:
 | `extension-Group.member.entity from FHIR version 5.0 is not allowed` | R5 backport extension — declared in the IG profiles, validator may not resolve it without the full IG publisher build |
 | `Unable to find a profile match for Organization/...` | Juristic person Organizations have no MIABIS profile (they are plain FHIR Organizations used as `partOf` targets) |
 | `This element does not match any known slice` | Informational — the validator found an element that doesn't match a named slice but is allowed by `rules: #open` |
-
-## Generating Test Bundles
-
-Use the companion `generate-miabis-bundle.py` script. Generated files are saved to `bundles/` automatically.
-
-```bash
-# Generate bundles of various sizes (output goes to bundles/ by default)
-python generate-miabis-bundle.py --donors 10 --seed 1
-python generate-miabis-bundle.py --donors 50 --biobanks 3 --collections 5 --seed 2
-python generate-miabis-bundle.py --donors 200 --biobanks 5 --collections 10 --seed 3
-
-# Validate all generated bundles
-python validate-miabis.py
-```
 
 ## Manual Validation (without the script)
 
